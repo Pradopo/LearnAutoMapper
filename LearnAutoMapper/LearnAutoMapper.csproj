@@ -66,6 +66,7 @@
     <Compile Include="SimpleMapper.cs" />
     <Compile Include="UserDto.cs" />
     <Compile Include="UserModel.cs" />
+    <Compile Include="YieldTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -91,6 +92,18 @@ namespace LearnAutoMapper
             //dto.CustomerName.ShouldEqual("George Costanza");
             //dto.Total.ShouldEqual(74.85m);
             Console.WriteLine("Finished RunSampleFlaterring");
+        }
+
+        public static void RunSampleAssembyMapper()
+        {
+            Assembly asmOrder = typeof(Order).Assembly;
+            foreach (Type type in asmOrder.GetTypes())
+            {
+                asmOrder.CreateInstance(type.FullName);
+                Console.WriteLine(type.FullName);
+            }
+            
+
         }
     }
 }
